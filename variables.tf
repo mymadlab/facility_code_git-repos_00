@@ -1,6 +1,6 @@
-#variable "var1" {
-#  description = "example of a variable"
-#  type        = string
-#  nullable    = false
-#  default     = "hello"
-#}
+variable "github_token" {
+  description = "The Github token"
+  type        = string
+  nullable    = false
+  sensitive   = true
+}
