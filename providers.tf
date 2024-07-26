@@ -2,21 +2,21 @@ terraform {
   cloud {
     organization = "mymadlab"
     workspaces {
-      tags = []
+      tags = ["facility", "code", "facility_code_git-repos_00", "repos"]
     }
   }
 
   required_providers {
-    #    provider1 = {
-    #      source  = "owner/provider1"
-    #      version = "~> #.#.#"
-    #    }
+    github = {
+      source  = "integrations/github"
+      version = "~>6.2.0"
+    }
   }
 
   required_version = "~> 1.7.5"
 
 }
 
-#provider "provider1" {
-
-#}
+provider "github" {
+  token = var.github_token
+}

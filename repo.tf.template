@@ -1,0 +1,11 @@
+module "<name_of_repo>" {
+  source  = "app.terraform.io/mymadlab/mml_repository_manager/github"
+  version = "~> 0.2.0"
+
+  repo_name   = "<name_of_repo>"
+  description = "<description>"
+  visibility  = "<visibility>"
+  wiki        = true
+  repo_type   = "<type>" # Type for clone of the repo
+  product     = "<language>" # Language the code for clone of the repo
+}
